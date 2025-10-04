@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Rubik_s_Cube_Solver_MAUI.Components"
+             x:Class="Rubik_s_Cube_Solver_MAUI.ProjectPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="Main Page">
+
+    <AbsoluteLayout BackgroundColor="#352F44">
+        <StackLayout AbsoluteLayout.LayoutBounds="2, 2, 1362, 731" BackgroundColor="#B9B4C7">
+
+            <Label Text="Projects"
+                   FontSize="Large"
+                   Padding="40, 35, 0, 45"
+                   BackgroundColor="#5C5470"
+                   TextColor="WhiteSmoke" />
+
+            <local:Separator WidthRequest="1366" HeightRequest="1" />
+
+            <ScrollView VerticalOptions="FillAndExpand">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <local:Preview Title="abcd" Source="thumbnail.png" Placement="0, 0" />
+                    <local:Preview Title="efgh" Source="thumbnail.png" Placement="0, 1" />
+                    <local:Preview Title="ijkl" Source="thumbnail.png" Placement="0, 2" />
+                    <local:Preview Title="mnop" Source="thumbnail.png" Placement="0, 3" />
+                    <local:Preview Title="qrst" Source="thumbnail.png" Placement="0, 4" />
+                    <local:Preview Title="uvwx" Source="thumbnail.png" Placement="0, 5" />
+                    <local:Preview Title="yzab" Source="thumbnail.png" Placement="1, 0" />
+                    <local:Preview Title="cdef" Source="thumbnail.png" Placement="1, 1" />
+                    <local:Preview Title="ghij" Source="thumbnail.png" Placement="1, 2" />
+                    <local:Preview Title="klmn" Source="thumbnail.png" Placement="1, 3" />
+                    <local:Preview Title="opqr" Source="thumbnail.png" Placement="1, 4" />
+                    <local:Preview Title="stuv" Source="thumbnail.png" Placement="1, 5" />
+                    <local:Preview Title="wxyz" Source="thumbnail.png" Placement="2, 0" />
+                    <local:Preview Title="test" Source="thumbnail.png" Placement="2, 1" />
+                    <local:Preview Title="test" Source="thumbnail.png" Placement="2, 2" />
+                    <local:Preview Title="test" Source="thumbnail.png" Placement="2, 3" />
+                    <local:Preview Title="test" Source="thumbnail.png" Placement="2, 4" />
+                    <local:Preview Title="test" Source="thumbnail.png" Placement="2, 5" />
+                </Grid>
+            </ScrollView>
+
+            <local:Separator WidthRequest="1366" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="EndAndExpand"
+                         Margin="30, 20">
+
+                <Button Text="Open file"
+                        FontSize="12"
+                        BackgroundColor="#5C5470"
+                        CornerRadius="5"
+                        MinimumHeightRequest="10"
+                        HeightRequest="32"
+                        Padding="30, 0"
+                        Margin="10"
+                        Clicked="OpenProjectFile" />
+
+                <Button Text="New"
+                        FontSize="12"
+                        BackgroundColor="#352F44"
+                        CornerRadius="5"
+                        MinimumHeightRequest="10"
+                        HeightRequest="32"
+                        Padding="30, 0"
+                        Margin="10"
+                        Clicked="CreateNewProject" />
+            </StackLayout>
+
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>
